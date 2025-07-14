@@ -78,7 +78,7 @@ const Settings = () => {
     try {
       const token = localStorage.getItem('token');
       const response = await axios.put(
-        `${import.meta.env.VITE_BASE_URL}/user/preferences`,
+        `${import.meta.env.VITE_BASE_URL}/user/update`,
         { categories: selectedCategories },
         {
           headers: {

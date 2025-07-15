@@ -67,7 +67,7 @@ router.put('/update', [
         })
 ], userController.updateUser);
 
-app.get("/run-cron", async (req, res) => {
+router.get("/run-cron", async (req, res) => {
   try {
     await runArticleJob();
     res.status(200).send("Cron job executed successfully.");

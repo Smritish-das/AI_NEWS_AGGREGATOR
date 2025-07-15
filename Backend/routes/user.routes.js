@@ -3,6 +3,7 @@ const router = express.Router();
 const { body } = require('express-validator')
 const userController = require('../controllers/user.controller')
 const authMiddleware = require('../middleware/auth.middleware');
+const { runArticleJob } = require('../services/scheduler');
 
 router.post('/register',[
     body('categories').isArray().withMessage('Categories must be an array')

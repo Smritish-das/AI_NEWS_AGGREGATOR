@@ -40,6 +40,7 @@ function App() {
  
       <div className="App">
         <Routes>
+          <Route path="/index.html" element={<Navigate to="/" />} />
           <Route 
             path="/login" 
             element={user ? <Navigate to="/feed" /> : <Login />} 
